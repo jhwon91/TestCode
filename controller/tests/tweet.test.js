@@ -217,7 +217,6 @@ describe('TweetController', () => {
 
 		it('삭제하고자하는 트윗이 존재하지 않으면', async () => {
 			tweetRepository.getById = () => undefined;
-			// tweetRepository.update = jest.fn();
 
 			await tweetController.deleteTweet(request, response);
 
